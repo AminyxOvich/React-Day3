@@ -1,0 +1,129 @@
+:root {
+  --base-color-hue: 200; /* Example hue value */
+  --base-color-saturation: 100%; /* Example saturation value */
+  --base-color-lightness: 50%; /* Base lightness */
+  --active-color: hsl(var(--base-color-hue), var(--base-color-saturation), var(--base-color-lightness));
+  --hover-color: hsl(var(--base-color-hue), var(--base-color-saturation), calc(var(--base-color-lightness) - 10%));
+}
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display:  flex   ;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #282c34;
+    color: hsl(0, 0%, 87%);
+    font-size: 1.2em;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+header{
+  top:10px;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header ul{
+  
+  list-style-type: none;
+  margin: 0 auto;
+  margin-top: 18px;
+  padding: 10px;
+  overflow: hidden;
+  background-color: hsl(0, 0%, 13%);
+  position: fixed;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 50%; 
+  z-index: 1000;
+  border-radius: 14px;
+  box-shadow: 1px 1px 5px var(--active-color);
+}
+header ul li{
+  color: hsl(0, 0%, 87%);
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+header ul li:hover{
+  color: var(--hover-color);
+  cursor: pointer   ;
+}
+hr{
+  color: var(--active-color);
+}
+.label{
+  color:var(--active-color);
+  font-weight: bold;
+}
+label{
+  color:var(--active-color);
+  font-weight: bold;
+}
+button{
+  background-color: var(--active-color);
+  border: none;
+  color: rgb(27, 27, 27);
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border: 0px white solid;
+}
+button:hover{
+  background-color: var(--hover-color);
+  color: white;
+}
+.count-display{
+  font-size: 2em;
+  border: 2px solid hsl(0, 3%, 95%);
+  border-radius: 47%;
+  cursor:default;
+  padding: 10px;
+}  
+.color-picker-container h1{
+  font-size:3em ;
+  font-weight: 900;
+  margin-bottom: 75px;
+  text-shadow:1px 2px 5px var(--active-color);
+}
+.color-picker-container label{
+  font-size: 1.2em;
+
+}
+.color-display{
+  font-size: 2em;
+  border: 2px solid hsl(0, 3%, 95%);
+  border-radius: 18px;
+  cursor:default;
+  padding: 45px;
+  margin: 10px;
+}
+.Component-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; 
+  margin-top: 100px;
+} 
+.Component-container button{
+  margin: 10px;
+} 
+.Component-container input, textarea , select{
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid hsl(0, 3%, 95%);
+}
